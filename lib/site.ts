@@ -84,8 +84,9 @@ export const products = [
   {
     name: "Men Pajamas",
     text: "Comfortable woven and knit pajama sets with clean finishing, accurate sizing, and brand-ready packaging.",
-    image:
-      "https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=900&q=80"
+    image:"/images/products/menXY25319-1.jpg"
+  
+     
   },
   {
     name: "Kids Pajamas",
