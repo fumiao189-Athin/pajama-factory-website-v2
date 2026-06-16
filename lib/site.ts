@@ -27,7 +27,21 @@ export const site = {
   metaDescription:
     "Fu Miao E-commerce Co., Ltd. is a pajama manufacturer and sleepwear manufacturer in China offering custom pajamas, private label pajamas, OEM pajama manufacturing, and ODM pajama factory services.",
   description:
-    "Fu Miao E-commerce Co., Ltd. is a China pajama manufacturing partner with 15+ years of experience in OEM pajama manufacturing, ODM pajama design, and private label service.",
+    "description: `
+Fu Miao E-commerce Co., Ltd. is a professional pajama and loungewear manufacturer based in China, specializing in OEM & ODM production for global brands, wholesalers, and e-commerce sellers.
+
+With 15+ years of manufacturing experience, we provide full-service solutions including design development, fabric sourcing, sampling, bulk production, strict quality control, and international shipping support.
+
+Our factory focuses on:
+- Custom pajama sets
+- Private label sleepwear
+- Men’s, women’s, and plus-size collections
+- Fast sampling and stable mass production
+
+We are committed to helping our partners build competitive sleepwear brands with reliable quality, flexible customization, and on-time delivery.
+
+Whether you are a startup brand or an established distributor, we provide scalable manufacturing solutions tailored to your market needs.
+`,",
   url: "https://www.fumiao-pajama.com",
   email: "fumiao189@gmail.com",
   phone: ""+86 175 2045 2787"",
