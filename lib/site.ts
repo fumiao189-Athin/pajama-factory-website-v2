@@ -30,8 +30,8 @@ export const site = {
     "Fu Miao E-commerce Co., Ltd. is a China pajama manufacturing partner with 15+ years of experience in OEM pajama manufacturing, ODM pajama design, and private label service.",
   url: "https://www.fumiao-pajama.com",
   email: "fumiao189@gmail.com",
-  phone: "+86 17520452787",
-  whatsapp: "+86 17520452787",
+  phone: ""+86 175 2045 2787"",
+  whatsapp:"https://wa.me/8617520452787",
   wechat: "+86 17520452787",
   experience: "15+ Years",
   address:
