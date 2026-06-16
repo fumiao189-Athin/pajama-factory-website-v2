@@ -31,7 +31,7 @@ export const site = {
   url: "https://www.fumiao-pajama.com",
   email: "fumiao189@gmail.com",
   phone: ""+86 175 2045 2787"",
-  whatsapp:"https://wa.me/8617520452787",
+  whatsapp:"://wa.me/8617520452787?text=Hello%20I%20want%20to%20inquire%20about%20pajamasgit add .",
   wechat: "+86 17520452787",
   experience: "15+ Years",
   address:
