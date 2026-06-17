@@ -1,125 +1,162 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/Button";
 import { ContactForm } from "@/components/ContactForm";
-import { customers, products, services, site, strengths } from "@/lib/site";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, MessageCircle, Globe, Truck, Shield } from "lucide-react";
+import { site, services } from "@/lib/site";
 
 export default function HomePage() {
   return (
-    <>
-      <section className="relative isolate overflow-hidden bg-cocoa text-white">
-        <Image src={site.image} alt="Fashion textile production and sleepwear manufacturing" fill priority className="object-cover opacity-45" sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cocoa via-cocoa/75 to-cocoa/25" />
-        <div className="relative mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/80">
-              OEM / ODM Sleepwear Factory in Shenzhen
-            </p>
-            <h1 className="mt-5 max-w-4xl text-4xl font-bold tracking-tight text-balance sm:text-6xl lg:text-7xl">
-              {site.name}
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/85">
-              A China pajama manufacturing partner with {site.experience} of
-              experience, helping pajama brands, wholesalers, distributors,
-              importers, and e-commerce sellers develop export-ready sleepwear.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Button href="/contact-us" variant="light">Request a Quote</Button>
-              <Button href="/products" variant="secondary">View Products</Button>
-            </div>
+    <main className="bg-white text-black">
+
+      {/* HERO - 高转化核心 */}
+      <section className="relative bg-cocoa text-white overflow-hidden">
+        <Image
+          src={site.image}
+          alt="Pajama Factory"
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+
+        <div className="relative max-w-6xl mx-auto px-6 py-24">
+          <p className="uppercase tracking-widest text-white/70 text-sm">
+            OEM / ODM Pajama Manufacturer in China
+          </p>
+
+          <h1 className="text-4xl md:text-6xl font-bold mt-4 leading-tight">
+            Custom Pajama Factory <br /> Built for Global Brands
+          </h1>
+
+          <p className="mt-6 text-lg text-white/80 max-w-2xl">
+            We help brands, wholesalers and Amazon sellers build profitable sleepwear lines with fast sampling, stable production and strict QC.
+          </p>
+
+          {/* CTA */}
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link href="/contact-us">
+              <Button variant="light">📩 Request a Quote</Button>
+            </Link>
+
+            <Link href={site.whatsapp} target="_blank">
+              <Button variant="secondary">💬 WhatsApp Us</Button>
+            </Link>
           </div>
-          <div className="hidden rounded-lg border border-white/20 bg-white/10 p-6 backdrop-blur md:block">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/75">
-              Built for B2B buyers
-            </p>
-            <div className="mt-5 grid gap-3">
-              <div className="flex items-center gap-3 rounded-md bg-white/90 px-4 py-3 text-sm font-semibold text-cocoa">
-                <CheckCircle2 className="h-5 w-5 text-sage" aria-hidden="true" />
-                {site.experience} Experience
-              </div>
-              {customers.map((customer) => (
-                <div key={customer} className="flex items-center gap-3 rounded-md bg-white/90 px-4 py-3 text-sm font-semibold text-cocoa">
-                  <CheckCircle2 className="h-5 w-5 text-sage" aria-hidden="true" />
-                  {customer}
-                </div>
-              ))}
-            </div>
+
+          {/* Trust badges */}
+          <div className="mt-10 flex flex-wrap gap-6 text-white/70 text-sm">
+            <span>✔ 15+ Years Factory</span>
+            <span>✔ OEM / ODM Support</span>
+            <span>✔ Fast Sampling</span>
+            <span>✔ Global Shipping</span>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-12">
-        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
-          {services.map((service) => (
-            <div key={service} className="rounded-lg border border-cocoa/10 bg-linen/60 p-6">
-              <CheckCircle2 className="h-6 w-6 text-clay" aria-hidden="true" />
-              <h2 className="mt-4 text-lg font-bold text-cocoa">{service}</h2>
-              <p className="mt-2 text-sm leading-6 text-ink/70">
-                Dedicated B2B support from concept, sample, label, packaging,
-                bulk production, inspection, and shipment coordination.
-              </p>
+      {/* WHY US - 信任区 */}
+      <section className="py-20 max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center">Why Global Buyers Choose Us</h2>
+
+        <div className="grid md:grid-cols-4 gap-6 mt-12">
+          {[
+            {
+              icon: <Shield />,
+              title: "Strict Quality Control",
+              desc: "Every batch is checked before shipment"
+            },
+            {
+              icon: <Globe />,
+              title: "Global Clients",
+              desc: "Serving US, EU, Middle East buyers"
+            },
+            {
+              icon: <Truck />,
+              title: "Fast Delivery",
+              desc: "Stable production & on-time shipping"
+            },
+            {
+              icon: <MessageCircle />,
+              title: "Fast Response",
+              desc: "Reply within 12 hours"
+            },
+          ].map((item, i) => (
+            <div key={i} className="p-6 border rounded-xl">
+              <div className="text-cocoa">{item.icon}</div>
+              <h3 className="font-semibold mt-3">{item.title}</h3>
+              <p className="text-sm text-gray-600 mt-2">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-linen py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-clay">
-              Sleepwear categories
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-cocoa sm:text-4xl">
-              Pajama production for every channel.
-            </h2>
-          </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {products.map((product) => (
-              <article key={product.name} className="overflow-hidden rounded-lg border border-cocoa/10 bg-white shadow-sm">
-                <div className="relative aspect-[4/3]">
-                  <Image src={product.image} alt={product.name} fill className="object-cover" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-bold text-cocoa">{product.name}</h3>
-                  <p className="mt-2 text-sm leading-6 text-ink/70">{product.text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* SERVICES - 转化型展示 */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center">Our Manufacturing Services</h2>
 
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-clay">
-              Factory partner
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-cocoa sm:text-4xl">
-              Practical manufacturing support from concept to shipment.
-            </h2>
-            <p className="mt-5 text-base leading-8 text-ink/75">
-              From new private label collections to repeat wholesale programs,
-              Fu Miao focuses on stable quality, clear communication, and
-              reliable production planning for international pajama buyers.
-            </p>
-            <div className="mt-8">
-              <Button href="/oem-odm-service">Explore OEM/ODM</Button>
-            </div>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {strengths.map((item) => (
-              <div key={item.title} className="rounded-lg bg-white p-6 shadow-sm">
-                <item.icon className="h-7 w-7 text-clay" aria-hidden="true" />
-                <h3 className="mt-4 text-lg font-bold text-cocoa">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-ink/70">{item.text}</p>
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
+            {services.map((service) => (
+              <div key={service} className="bg-white p-6 rounded-xl border">
+                <CheckCircle2 className="text-green-600" />
+                <h3 className="font-semibold mt-3">{service}</h3>
+                <p className="text-sm text-gray-600 mt-2">
+                  Professional OEM/ODM support for your brand development.
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <ContactForm />
-    </>
+      {/* FACTORY STORY - 信任强化 */}
+      <section className="py-20 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+
+          <div>
+            <h2 className="text-3xl font-bold">A Reliable Pajama Manufacturer in China</h2>
+            <p className="mt-4 text-gray-600">
+              With over 15 years of experience, we specialize in OEM/ODM sleepwear production for global brands.
+              From fabric sourcing to final packaging, we support your full supply chain.
+            </p>
+
+            <div className="mt-6 space-y-2 text-sm text-gray-700">
+              <p>✔ Custom pajama sets</p>
+              <p>✔ Private label sleepwear</p>
+              <p>✔ Men / Women / Plus-size collections</p>
+              <p>✔ Small MOQ & fast sampling</p>
+            </div>
+          </div>
+
+          <div className="bg-gray-200 h-80 rounded-xl flex items-center justify-center">
+            Factory Image
+          </div>
+
+        </div>
+      </section>
+
+      {/* FINAL CTA - 强转化 */}
+      <section className="bg-cocoa text-white py-20 text-center">
+        <h2 className="text-3xl font-bold">Ready to Build Your Pajama Brand?</h2>
+        <p className="mt-4 text-white/80">
+          Get factory price & customization solution within 12 hours
+        </p>
+
+        <div className="mt-6 flex justify-center gap-4">
+          <Link href="/contact-us">
+            <Button variant="light">Get Quote</Button>
+          </Link>
+
+          <Link href={site.whatsapp} target="_blank">
+            <Button variant="secondary">Chat on WhatsApp</Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="py-20 max-w-4xl mx-auto px-6">
+        <ContactForm />
+      </section>
+
+    </main>
   );
 }
