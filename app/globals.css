@@ -23,3 +23,10 @@ body {
 .text-balance {
   text-wrap: balance;
 }
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}

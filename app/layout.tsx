@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Header, Footer, WhatsAppFloat } from "@/components/Layout";
+import { TrackingBeacon } from "@/components/Tracking";
 import {
   organizationSchema,
   serviceSchema,
@@ -13,31 +14,29 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: site.metaTitle,
-    template: "%s | Fu Miao E-commerce Co., Ltd."
+    template: "%s | Fu Miao Pajama Factory"
   },
   description: site.metaDescription,
   keywords: [
+    "Fu Miao Pajamas",
     "Fu Miao E-commerce Co Ltd",
     ...targetKeywords,
-    "pajama manufacturer China",
-    "sleepwear factory China",
-    "OEM Pajama Manufacturing",
-    "ODM Pajama Design",
-    "Private Label Service",
-    "custom pajama manufacturer",
-    "family matching pajamas wholesale",
-    "satin pajama factory",
-    "cotton pajamas manufacturer"
+    "OEM pajama manufacturer China",
+    "ODM sleepwear factory China",
+    "custom sleepwear supplier",
+    "private label pajama manufacturer",
+    "wholesale pajamas China"
   ],
-  alternates: {
-    canonical: "/"
+  alternates: { canonical: "/" },
+  icons: {
+    icon: "/favicon.ico"
   },
   openGraph: {
     title: site.metaTitle,
     description: site.metaDescription,
     url: site.url,
     siteName: site.shortName,
-    images: [{ url: site.image, width: 1600, height: 900 }],
+    images: [{ url: site.image, width: 1200, height: 1200 }],
     locale: "en_US",
     type: "website"
   },
@@ -59,6 +58,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             __html: JSON.stringify([organizationSchema, websiteSchema, serviceSchema])
           }}
         />
+        <TrackingBeacon />
         <Header />
         <main>{children}</main>
         <Footer />

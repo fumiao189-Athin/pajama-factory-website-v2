@@ -17,118 +17,68 @@ import {
   Users
 } from "lucide-react";
 
-/* ========================================
-   COMPANY INFORMATION
-======================================== */
-
 export const site = {
   name: "Fu Miao E-commerce Co., Ltd.",
   shortName: "Fu Miao Pajama Factory",
-
+  brandName: "FM Pajamas",
   metaTitle:
     "Pajama Manufacturer China | Custom & Private Label Pajamas Supplier",
-
   metaDescription:
-    "Professional pajama manufacturer in China offering OEM/ODM sleepwear production, custom pajamas, private label services, sampling, quality control, and global shipping support.",
-
-  description: `
-Fu Miao E-commerce Co., Ltd. is a professional pajama and loungewear manufacturer based in China.
-
-We specialize in OEM and ODM sleepwear production for global brands, wholesalers, distributors, importers, and e-commerce sellers.
-
-With more than 15 years of manufacturing experience, we provide complete production support, including design development, fabric sourcing, sampling, bulk production, quality control, private label packaging, and international shipping coordination.
-
-Our main product categories include custom pajama sets, private label sleepwear, men's pajamas, women's pajamas, kids' pajamas, plus-size sleepwear, family matching pajamas, and loungewear.
-
-We help customers build competitive sleepwear collections with reliable quality, flexible customization, stable production, and on-time delivery.
-`,
-
-  url: "https://www.fumiao-pajama.com",
-
+    "Professional pajama manufacturer in China offering OEM/ODM sleepwear production, custom pajamas, private label services, low MOQ, sampling, strict quality control, and global shipping support.",
+  description:
+    "Fu Miao E-commerce Co., Ltd. is a China-based pajama and loungewear manufacturer supporting global brands, wholesalers, distributors, importers, and e-commerce sellers with OEM/ODM production and private label services.",
+  url: "https://pajama-factory-website-v2.vercel.app",
   email: "fumiao189@gmail.com",
-
   phone: "+86 175 2045 2787",
-
   whatsappNumber: "8617520452787",
-
   whatsapp:
-    "https://wa.me/8617520452787?text=Hello%20I%20want%20to%20inquire%20about%20pajama%20manufacturing",
-
+    "https://wa.me/8617520452787?text=Hello%20I%20want%20to%20inquire%20about%20custom%20pajama%20manufacturing",
   wechat: "+86 17520452787",
-
   experience: "15+ Years",
-
+  moq: "100 sets",
+  sampleTime: "7 days",
+  bulkLeadTime: "15-30 days",
+  exportMarkets: "Europe, North America, Middle East and other global markets",
+  fabrics: "Cotton, bamboo, polyester, spandex blends, satin and seasonal fabrics",
   address:
     "Unit B502, Tower A1, Bairui Da Building, Banxuegang Avenue, Vanke City Community, Bantian Subdistrict, Longgang District, Shenzhen, Guangdong Province, China",
-
-  image:
-    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=80"
+  logo: "/images/brand/fm-pajamas-logo.png",
+  image: "/images/site/women-pajamas-cream-blue.webp"
 };
 
-/* ========================================
-   NAVIGATION
-   label 和 title 同时保留，兼容现有组件
-======================================== */
-
 export const navItems = [
-  {
-    href: "/",
-    label: "Home",
-    title: "Home"
-  },
-  {
-    href: "/about-us",
-    label: "About Us",
-    title: "About Us"
-  },
-  {
-    href: "/products",
-    label: "Products",
-    title: "Products"
-  },
-  {
-    href: "/oem-odm-service",
-    label: "OEM/ODM Service",
-    title: "OEM/ODM Service"
-  },
-  {
-    href: "/factory-quality-control",
-    label: "Factory & QC",
-    title: "Factory & QC"
-  },
-  {
-    href: "/certificates",
-    label: "Certificates",
-    title: "Certificates"
-  },
-  {
-    href: "/contact-us",
-    label: "Contact Us",
-    title: "Contact Us"
-  }
+  { href: "/", label: "Home", title: "Home" },
+  { href: "/products", label: "Products", title: "Products" },
+  { href: "/oem-odm-service", label: "OEM/ODM", title: "OEM/ODM Service" },
+  { href: "/factory-quality-control", label: "Factory & QC", title: "Factory & Quality Control" },
+  { href: "/certificates", label: "Compliance", title: "Certificates & Compliance" },
+  { href: "/about-us", label: "About", title: "About Us" },
+  { href: "/contact-us", label: "Contact", title: "Contact Us" }
 ];
 
-/* ========================================
-   SERVICES
-======================================== */
+export const socialLinks = [
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/athin-huang-39167b415/" },
+  { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61590207461284" },
+  { name: "TikTok", href: "https://www.tiktok.com/@atom.tech5" },
+  { name: "YouTube", href: "https://www.youtube.com/@fumiaosleepwear" },
+  { name: "Pinterest", href: "https://www.pinterest.com/pajamamanufacturerchina/" },
+  { name: "X", href: "https://x.com/HuangAthin" },
+  { name: "Alibaba", href: "https://fumiao189.en.alibaba.com/" }
+];
 
 export const services = [
   "OEM Pajama Manufacturing",
   "ODM Pajama Design",
   "Private Label Sleepwear",
-  "Custom Pajama Development",
+  "Custom Logo, Label & Packaging",
   "Fabric and Trim Sourcing",
   "Sampling and Bulk Production",
   "Quality Inspection",
-  "Packaging and Shipping Support"
+  "Global Shipping Support"
 ];
 
-/* ========================================
-   CUSTOMER TYPES
-======================================== */
-
 export const customers = [
-  "Pajama Brands",
+  "Sleepwear Brands",
   "Wholesalers",
   "Distributors",
   "Importers",
@@ -137,238 +87,253 @@ export const customers = [
   "Startup Brands"
 ];
 
-/* ========================================
-   SEO KEYWORDS
-======================================== */
-
 export const targetKeywords = [
-  "pajama manufacturer",
   "pajama manufacturer China",
-  "custom pajamas",
-  "custom pajama factory",
+  "custom pajama manufacturer",
   "private label pajamas",
-  "private label sleepwear",
   "OEM pajama manufacturer",
-  "ODM pajama factory",
-  "sleepwear manufacturer",
-  "pajama supplier China",
-  "custom sleepwear manufacturer",
-  "wholesale pajamas"
+  "ODM sleepwear factory",
+  "sleepwear manufacturer China",
+  "wholesale pajamas",
+  "custom sleepwear supplier",
+  "cotton pajama factory",
+  "satin pajama manufacturer",
+  "plus size pajamas supplier"
 ];
-
-/* ========================================
-   PRODUCTS
-======================================== */
 
 export const products = [
   {
     name: "Women Pajamas",
+    slug: "women-pajamas",
     text:
-      "Custom women's pajama sets, robes, camisoles, sleep dresses, and loungewear for private label and wholesale collections.",
-    image:
-      "https://images.unsplash.com/photo-1532781909635-49b43e18b72b?auto=format&fit=crop&w=900&q=80"
+      "Custom women's pajama sets, sleep shirts, robes, satin sets, cotton sleepwear, and lifestyle loungewear for private label collections.",
+    image: "/images/site/women-pajamas-cream-blue.webp",
+    tags: ["Cotton", "Satin", "Prints", "Private label"]
   },
   {
     name: "Men Pajamas",
+    slug: "men-pajamas",
     text:
-      "Comfortable woven and knitted men's pajama sets with accurate sizing, clean finishing, and custom brand packaging.",
-    image: "/images/products/menXY25319-1.jpg"
-  },
-  {
-    name: "Kids Pajamas",
-    text:
-      "Soft and practical children's sleepwear with customizable fabrics, prints, sizes, labels, and packaging.",
-    image:
-      "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    name: "Family Matching Pajamas",
-    text:
-      "Coordinated family pajama collections for Christmas, holiday campaigns, online shops, and seasonal wholesale programs.",
-    image:
-      "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80"
+      "Men's short sleeve sets, long pants sets, robes, plaid loungewear, holiday pajamas, and custom sleepwear programs.",
+    image: "/images/site/men-pajamas-dark-stripe.webp",
+    tags: ["Short sets", "Long sets", "Robes", "OEM"]
   },
   {
     name: "Plus Size Pajamas",
+    slug: "plus-size-pajamas",
     text:
-      "Comfort-focused plus-size pajama and loungewear collections with flexible sizing and private label customization.",
-    image:
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80"
+      "Comfort-focused plus-size sleepwear with flexible size grading, soft fabrics, stable measurements, and private label packaging.",
+    image: "/images/site/plus-size-pajamas-gray.webp",
+    tags: ["Extended sizes", "Comfort fit", "Loungewear"]
   },
   {
-    name: "Satin Pajamas",
+    name: "Sleep Dresses & Robes",
+    slug: "sleep-dresses-robes",
     text:
-      "Premium satin pajama sets with refined piping, custom colors, personalized prints, labels, and gift-ready packaging.",
-    image:
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"
+      "Sleep dresses, button-front nightshirts, lightweight robes, and seasonal homewear styles for retail and online sellers.",
+    image: "/images/site/women-sleep-dress.webp",
+    tags: ["Nightshirts", "Robes", "Resort sleepwear"]
   },
   {
-    name: "Cotton Pajamas",
+    name: "Family Matching Pajamas",
+    slug: "family-matching-pajamas",
     text:
-      "Breathable cotton sleepwear designed for everyday comfort, wholesale programs, and private label collections.",
-    image:
-      "https://images.unsplash.com/photo-1523381294911-8d3cead13475?auto=format&fit=crop&w=900&q=80"
+      "Coordinated holiday and seasonal pajama collections for family campaigns, online shops, and promotional wholesale programs.",
+    image: "/images/site/men-christmas-pajamas-red.webp",
+    tags: ["Holiday", "Family sets", "Seasonal"]
   },
   {
-    name: "Loungewear",
+    name: "Custom Loungewear",
+    slug: "custom-loungewear",
     text:
-      "Relaxed homewear sets, tops, joggers, robes, and lifestyle collections for modern sleepwear brands.",
-    image:
-      "https://images.unsplash.com/photo-1506629905607-d405d7d3b0d2?auto=format&fit=crop&w=900&q=80"
+      "Soft homewear sets, tops, joggers, bamboo blends, knitted loungewear and capsule collections for lifestyle brands.",
+    image: "/images/site/men-cotton-loungewear-gray.webp",
+    tags: ["Bamboo", "Polyester blends", "Spandex"]
   }
 ];
 
-/* ========================================
-   COMPANY STRENGTHS
-======================================== */
+export const productGallery = [
+  "/images/site/women-pajamas-floral-cream.webp",
+  "/images/site/women-pajamas-pink-print.webp",
+  "/images/site/women-pajamas-blue-set.webp",
+  "/images/site/women-pajamas-black-floral.webp",
+  "/images/site/women-pajamas-red-set.webp",
+  "/images/site/women-pajamas-red-satin.webp",
+  "/images/site/men-short-set-charcoal.webp",
+  "/images/site/men-pajamas-tropical-green.webp",
+  "/images/site/men-pajamas-black-print.webp",
+  "/images/site/men-loungewear-black.webp",
+  "/images/site/men-pajamas-plaid-black.webp",
+  "/images/site/plus-size-loungewear-black.webp"
+];
+
+export const factoryImages = [
+  { src: "/images/site/factory-exterior.webp", alt: "Factory exterior and loading area" },
+  { src: "/images/site/factory-sewing-line.webp", alt: "Garment sewing workshop" },
+  { src: "/images/site/quality-cutting-table.webp", alt: "Cutting and fabric preparation" },
+  { src: "/images/site/quality-inspection.webp", alt: "Quality inspection for pajamas" },
+  { src: "/images/site/factory-production-floor.webp", alt: "Pajama production floor" },
+  { src: "/images/site/factory-office.webp", alt: "Merchandising and sales office" }
+];
 
 export const strengths = [
   {
     icon: Factory,
     title: "15+ Years Manufacturing Experience",
     text:
-      "Experienced support for pajama development, sampling, cutting, sewing, finishing, inspection, packing, and shipment."
+      "Experienced support from style development, fabric sourcing and sampling to cutting, sewing, inspection, packing and shipment."
   },
   {
     icon: Scissors,
-    title: "Custom OEM & ODM Service",
+    title: "Low MOQ Customization",
     text:
-      "Flexible customization for fabrics, colors, prints, sizing, trims, labels, packaging, and construction details."
+      "MOQ from 100 sets, with support for customer designs, samples, logos, labels, hangtags, wash labels and packaging."
   },
   {
     icon: ClipboardCheck,
     title: "Strict Quality Control",
     text:
-      "Inline inspection, measurement checks, workmanship review, final inspection, and packing verification."
+      "Inline inspection, measurements, workmanship review, labeling checks and final packing verification before shipment."
   },
   {
     icon: Globe,
-    title: "Export-Ready Support",
+    title: "Export-Ready Communication",
     text:
-      "Support for global brands, wholesalers, distributors, importers, and e-commerce sellers."
+      "Serving buyers in Europe, North America, the Middle East and other markets with practical production and shipping coordination."
   },
   {
     icon: PackageCheck,
     title: "Private Label Packaging",
     text:
-      "Custom care labels, brand labels, hangtags, barcode stickers, polybags, cartons, and retail packaging."
+      "Custom care labels, brand labels, hangtags, barcode stickers, polybags, cartons and retail-ready presentation."
   },
   {
     icon: Truck,
-    title: "Stable Production & Delivery",
+    title: "Stable Lead Times",
     text:
-      "Practical production planning and international shipping coordination for repeat and seasonal orders."
+      "Sample time around 7 days and bulk production commonly 15-30 days depending on fabric, quantity and order details."
   }
 ];
-
-/* ========================================
-   OEM / ODM PROCESS
-======================================== */
 
 export const oemSteps = [
   {
     icon: MessageCircle,
     title: "Inquiry & Product Brief",
     text:
-      "Share your target market, product style, fabric preference, quantity, packaging requirements, and delivery schedule."
+      "Share reference photos, target market, quantity, fabric preference, size range, packaging needs and expected delivery schedule."
   },
   {
     icon: PenTool,
-    title: "Design Development",
+    title: "Design & Tech Pack Support",
     text:
-      "We support tech packs, size charts, trims, color matching, artwork, print placement, and construction details."
+      "We support customer artwork, size charts, color matching, print placement, trims, labels, tags and construction details."
   },
   {
     icon: Ruler,
     title: "Sampling",
     text:
-      "Fit samples, photo samples, revised samples, and pre-production samples can be arranged before bulk production."
+      "Development samples, fit samples, photo samples, revised samples and pre-production samples can be arranged before bulk production."
   },
   {
     icon: Boxes,
-    title: "Bulk Production",
+    title: "Material Preparation",
     text:
-      "Fabric preparation, cutting, sewing, finishing, labeling, and packing are managed according to approved specifications."
+      "Fabric, trims, labels, packaging and approved production details are prepared before cutting and sewing begin."
   },
   {
     icon: PackageCheck,
-    title: "Quality Inspection",
+    title: "Bulk Production & QC",
     text:
-      "Measurements, workmanship, appearance, labels, accessories, and packing are checked before shipment."
+      "Cutting, sewing, finishing, measurements, labels and packing are managed according to approved specifications."
   },
   {
     icon: Truck,
-    title: "Shipping",
+    title: "Packing & Shipment",
     text:
-      "We support carton preparation, export documents, freight coordination, and handover to your shipping partner."
+      "We support carton marks, packing lists, export handover and coordination with your forwarder or shipping partner."
   }
 ];
-
-/* ========================================
-   CERTIFICATES AND COMPLIANCE
-======================================== */
 
 export const certificates = [
   {
     icon: BadgeCheck,
-    title: "OEKO-TEX Material Support",
+    title: "Material Certification Support",
     text:
-      "Certified fabrics and trims can be sourced upon request for qualified customer programs."
+      "Certified fabrics and trims such as OEKO-TEX options can be sourced upon request for qualified customer programs."
   },
   {
     icon: Award,
-    title: "BSCI and Social Compliance",
+    title: "Buyer Audit Cooperation",
     text:
-      "Factory compliance documentation can be prepared for qualified buyers and audit programs."
+      "Factory audit, social compliance and customer inspection cooperation can be arranged for qualified orders and programs."
   },
   {
     icon: Search,
     title: "AQL Inspection Support",
     text:
-      "Inspection reports can cover measurements, appearance, workmanship, labels, packing, and quantities."
+      "Inspection reports can cover measurements, appearance, workmanship, labels, accessories, packing and quantities."
   },
   {
     icon: Shirt,
     title: "Fabric Testing",
     text:
-      "Composition, shrinkage, color fastness, pilling, and other textile tests can be arranged through testing laboratories."
+      "Composition, shrinkage, color fastness, pilling and other textile tests can be arranged through third-party laboratories."
   },
   {
     icon: Handshake,
     title: "Private Label Documentation",
     text:
-      "Brand labels, care labels, hangtags, carton marks, barcode stickers, and packaging details can be customized."
+      "Brand labels, care labels, hangtags, barcode stickers, carton marks and packaging details can be prepared for retail orders."
   },
   {
     icon: Users,
-    title: "Buyer Audit Cooperation",
+    title: "Transparent Production Updates",
     text:
-      "We cooperate with customer audits, factory inspections, and third-party quality-control visits."
+      "Photos, samples, production updates and inspection checkpoints help overseas buyers control quality remotely."
   }
 ];
 
-/* ========================================
-   ORGANIZATION SCHEMA
-======================================== */
+export const faqs = [
+  {
+    question: "What is your MOQ for custom pajama orders?",
+    answer:
+      "Our starting MOQ is 100 sets. Final MOQ depends on fabric, color, print, size range, packaging and customization details."
+  },
+  {
+    question: "How long does sampling take?",
+    answer:
+      "Standard sampling time is around 7 days after design, fabric and details are confirmed. Complex prints or special fabrics may need more time."
+  },
+  {
+    question: "What is your bulk production lead time?",
+    answer:
+      "Bulk production usually takes 15-30 days depending on order quantity, fabric availability, complexity and packaging requirements."
+  },
+  {
+    question: "Can you make pajamas from customer pictures or samples?",
+    answer:
+      "Yes. We support customer photos, reference samples, tech packs, artwork, logo placement, sizing and private label packaging."
+  },
+  {
+    question: "Can you customize logo, hangtag, wash label and packaging?",
+    answer:
+      "Yes. We support custom woven labels, printed labels, care labels, hangtags, barcode stickers, polybags, cartons and retail packaging."
+  }
+];
 
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${site.url}/#organization`,
-
   name: site.name,
   alternateName: site.shortName,
-
   url: site.url,
-  image: site.image,
-
+  logo: `${site.url}${site.logo}`,
+  image: `${site.url}${site.image}`,
   description: site.metaDescription,
-
   email: site.email,
   telephone: site.phone,
-
   foundingDate: "2009",
-
   address: {
     "@type": "PostalAddress",
     streetAddress:
@@ -377,11 +342,8 @@ export const organizationSchema = {
     addressRegion: "Guangdong",
     addressCountry: "CN"
   },
-
   areaServed: "Worldwide",
-
   knowsAbout: targetKeywords,
-
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -391,71 +353,35 @@ export const organizationSchema = {
       areaServed: "Worldwide"
     }
   ],
-
-  sameAs: [site.whatsapp]
+  sameAs: socialLinks.map((item) => item.href)
 };
-
-/* ========================================
-   WEBSITE SCHEMA
-======================================== */
 
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${site.url}/#website`,
-
   url: site.url,
   name: site.name,
-
   description: site.metaDescription,
-
-  publisher: {
-    "@id": `${site.url}/#organization`
-  },
-
+  publisher: { "@id": `${site.url}/#organization` },
   inLanguage: "en"
 };
-
-/* ========================================
-   SERVICE SCHEMA
-======================================== */
 
 export const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${site.url}/#pajama-manufacturing-service`,
-
-  name:
-    "Custom Pajama Manufacturing, OEM, ODM and Private Label Sleepwear Services",
-
+  name: "Custom Pajama Manufacturing, OEM, ODM and Private Label Sleepwear Services",
   description: site.metaDescription,
-
-  provider: {
-    "@id": `${site.url}/#organization`
-  },
-
+  provider: { "@id": `${site.url}/#organization` },
   areaServed: "Worldwide",
-
-  serviceType: [
-    "Pajama Manufacturing",
-    "Custom Pajamas",
-    "Private Label Sleepwear",
-    "OEM Pajama Manufacturing",
-    "ODM Pajama Design",
-    "Wholesale Pajamas"
-  ],
-
+  serviceType: services,
   offers: {
     "@type": "OfferCatalog",
     name: "Pajama Manufacturing Services",
-
     itemListElement: services.map((service) => ({
       "@type": "Offer",
-
-      itemOffered: {
-        "@type": "Service",
-        name: service
-      }
+      itemOffered: { "@type": "Service", name: service }
     }))
   }
 };
